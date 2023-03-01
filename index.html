@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+</head>
+<body>
+    <div id="app">
+        <h1>Дз 1</h1>
+        <div class="box lol">
+            <button @click="background = red">RED</button>
+            <button @click="background = green">GREEN</button>
+            <button @click="background = blue">BLUE</button>
+        </div>
+        <div class="box">
+            <input type="text" v-model="text">
+            <p :class="background" v-if="text.length == 0">Вы ничего не ввели</p>
+            <p  :class="background" v-else-if="text > 1 && text < 21">Вы ввели {{text}}</p>
+            <p :class="background" v-else-if="isNaN(text)">Вы ввели не число</p>
+            <p :class="background" v-else-if="text <= 1">{{text}} меньше чем 2</p>
+            <p :class="background" v-else-if="text >= 21">{{text}} больше чем 12</p>
+        </div>
+    </div>
+    
+
+
+    <script src="main.js"></script>
+</body>
+</html>

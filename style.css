@@ -1,0 +1,28 @@
+h1{
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.box{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.lol{
+    display: flex;
+    gap: 10px;
+}
+
+.red{
+    background: red;
+}
+.green{
+    background: green;
+}
+.blue{
+    background: blue;
+}
